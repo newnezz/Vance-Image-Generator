@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 ULTIMATE JD VANCE-IFIER 3000 🌟</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #0000ff, 0 0 30px #ff0000; }
+            50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #0000ff, 0 0 40px #ff0000; }
+            100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #0000ff, 0 0 30px #ff0000; }
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+            border: 3px solid gold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin: 0.5rem;
+                width: calc(100% - 1rem);
+            }
+
+            .container::before,
+            .container::after {
+                font-size: 1.5rem;
+            }
+        }
+
+        .container::before {
+            content: '🦅';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2rem;
+        }
+
+        .container::after {
+            content: '🗽';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-family: 'Anton', sans-serif;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            animation: glow 2s ease-in-out infinite;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .description {
+                font-size: 0.9rem;
+                padding: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            padding: 0 1rem;
+            line-height: 1.6;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            animation: float 6s ease-in-out infinite;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .input-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            #prompt {
+                width: 100%;
+                max-width: none;
+                padding: 0.75rem;
+                font-size: 1rem;
+            }
+
+            button {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        #prompt {
+            flex: 1;
+            max-width: 500px;
+            padding: 1rem;
+            border: 3px solid #e74c3c;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        #prompt:focus {
+            outline: none;
+            border-color: #e74c3c;
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+            transform: scale(1.02);
+        }
+
+        button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        #image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: none;
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        #image[src] {
+            display: block;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .download-button {
+            display: none;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
+        }
+
+        .download-button.active {
+            display: inline-block;
+            animation: bounce 1s ease-in-out;
+        }
+
+        .download-button:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 1s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .loading-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            border: 3px solid #e74c3c;
+        }
+
+        .loading-container.active {
+            display: flex;
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            text-align: center;
+            animation: bounce 1s infinite;
+        }
+
+        .loading-spinner {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            animation: spin 4s linear infinite;
+        }
+
+        .loading-spinner::before {
+            content: '🦅';
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loading-spinner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 8px solid #e74c3c;
+            border-top-color: #3498db;
+            border-right-color: white;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .fun-fact {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        #image-container {
+            display: none;
+        }
+
+        #image-container.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .loading-container {
+                padding: 1rem;
+            }
+
+            .loading-spinner {
+                width: 100px;
+                height: 100px;
+            }
+
+            .loading-spinner::before {
+                font-size: 30px;
+            }
+
+            .loading-text {
+                font-size: 1rem;
+            }
+
+            .fun-fact {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .container {
+                border-radius: 10px;
+                margin: 0;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .description {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 JD VANCE-IFIER 3000 🌟</h1>
+        <p class="subtitle">The Most Patriotic Image Generator Ever Created!</p>
+        <p class="description">Behold the power of AI! Generate AMAZING images of America's favorite Vice President* using cutting-edge technology! 
+            <br>(*Not actually Vice President... yet? 😉)</p>
+        
+        <div class="input-container">
+            <input type="text" id="prompt" placeholder="🎨 Describe your wildest JD Vance dreams here..." />
+            <button onclick="getStreamImage()">🚀 VANCE-IFY!</button>
+        </div>
+
+        <div class="loading-container" id="loading">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">🎨 GENERATING PATRIOTIC MASTERPIECE 🎨</p>
+            <p class="fun-fact">This might take up to a minute... <br>Just like JD's journey to the Senate! 🇺🇸</p>
+        </div>
+
+        <div id="image-container" class="image-container">
+            <img id="image" src="" alt="Your Vance-tastic creation will appear here!" />
+            <button onclick="downloadImage()" class="download-button" id="download-button">
+                🎉 Download Your Masterpiece 🎉
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function downloadImage() {
+            const image = document.getElementById('image');
+            if (!image.src) return;
+
+            // Create a temporary link
+            const link = document.createElement('a');
+            link.href = image.src;
+            link.download = 'jd-vance-masterpiece.webp';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function getStreamImage() {
+            const prompt = document.getElementById("prompt").value;
+            if (prompt === "") {
+                alert("Please enter a prompt");
+                return;
+            }
+
+            // Show loading, hide image and download button
+            document.getElementById("loading").classList.add("active");
+            document.getElementById("image-container").classList.remove("active");
+            document.getElementById("image").src = "";
+            document.getElementById("download-button").classList.remove("active");
+
+            // Update loading text to show progress
+            const loadingText = document.querySelector(".loading-text");
+            const originalText = loadingText.textContent;
+            loadingText.textContent = "🎨 GENERATING PATRIOTIC MASTERPIECE... 🎨";
+
+            fetch("https://jd-vance-aigen-backend.vercel.app/generate?prompt=" + encodeURIComponent(prompt), {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                },
+                mode: 'cors', // Explicitly set CORS mode
+                timeout: 60000 // 60 second timeout
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                loadingText.textContent = "🎨 GENERATING MASTERPIECE... 🎨";
+                return response.json();
+            })
+            .then((json) => {
+                if (!json || !json.JSON) {
+                    throw new Error('Invalid response format');
+                }
+
+                json = json.JSON;
+                let combinedChunks = [];
+
+                // Combine all chunks into a single array
+                for (let i = 0; i < json.length; i++) {
+                    for (let key in json[i]) {
+                        combinedChunks.push(json[i][key]);
+                    }
+
+                }
+
+                // Convert the combined chunks to an ArrayBuffer
+                function byteArrayToArrayBuffer(byteArray) {
+                    const uint8Array = new Uint8Array(byteArray);
+                    return uint8Array.buffer;
+                }
+
+                // Create a Blob from the ArrayBuffer
+                const blob = new Blob([byteArrayToArrayBuffer(combinedChunks)], {
+                    type: "image/webp",
+                });
+
+                // Create an Object URL from the Blob
+                const imageUrl = URL.createObjectURL(blob);
+                
+                // Hide loading, show image and download button
+                document.getElementById("loading").classList.remove("active");
+                document.getElementById("image-container").classList.add("active");
+                document.getElementById("image").src = imageUrl;
+                document.getElementById("download-button").classList.add("active");
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                let errorMessage = 'An error occurred while generating the image. ';
+                
+                if (error.message.includes('Failed to fetch')) {
+                    errorMessage += 'Could not connect to the server. Please check your internet connection and try again.';
+                } else if (error.message.includes('timeout')) {
+                    errorMessage += 'The request timed out. Please try again.';
+                } else if (error.message.includes('HTTP error')) {
+                    errorMessage += 'Server error. Please try again later.';
+                } else if (error.message.includes('Invalid response format')) {
+                    errorMessage += 'Received invalid data from server. Please try again.';
+                }
+
+                alert(errorMessage);
+                document.getElementById("loading").classList.remove("active");
+                loadingText.textContent = originalText;
+            });
+        }
+    </script>
+
+    <script>
+        // Add twinkling stars effect
+        function createStars() {
+            const starsContainer = document.createElement('div');
+            starsContainer.className = 'stars';
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 1 + 's';
+                starsContainer.appendChild(star);
+            }
+            document.body.appendChild(starsContainer);
+        }
+        createStars();
+    </script>
+</body>
+</html>
+      
+      
